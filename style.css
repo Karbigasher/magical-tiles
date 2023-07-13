@@ -3,7 +3,7 @@
   height: 50vmin;
 } */
 body{
-  background-color: rgba(29, 31, 30, 0.87);
+  background-color: rgb(46, 46, 46);
 }
 
 #image-track > .image{
@@ -14,6 +14,7 @@ body{
   backface-visibility: hidden;
   transform: translateZ(0) scale(1, 1);
 }
+
 
 #image-track{
   display: flex;

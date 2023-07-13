@@ -1,4 +1,6 @@
 const track = document.getElementById("image-track")
+const body = document.getElementById("bod")
+   
 
 window.onmousedown = e => {
     track.dataset.mouseDownAt = e.clientX
@@ -17,12 +19,33 @@ window.onmousemove = e => {
 
     track.animate({
         transform: `translate(${nextPercentage}%, 25%)`
-    }, {duration: 1200, fill: "forwards"})
+    }, {duration: 1000, fill: "forwards"})
 
     for(const image of track.getElementsByClassName("image")){
         image.animate({
             objectPosition: `${100 + nextPercentage}% center`
-        }, {duration: 100, fill: "forwards"})
+        }, {duration: 1000, fill: "forwards"})
+    }
+    //scary thing
+    if (nextPercentage >= -100 && nextPercentage < -80)
+    {
+        body.style.backgroundColor = "rgb(155, 5, 5)"
+
+    }else if (nextPercentage >= -80 && nextPercentage < -60)
+    {
+        body.style.backgroundColor = "rgb(16, 14, 36)"
+
+    }else if (nextPercentage >= -60 && nextPercentage < -40)
+    {
+        body.style.backgroundColor = "rgb(46, 46, 46)"
+
+    }else if (nextPercentage >= -40 && nextPercentage < -20)
+    {
+        body.style.backgroundColor = "rgb(133, 133, 138)"
+
+    }else if (nextPercentage >= -20 && nextPercentage <= 0)
+    {
+        body.style.backgroundColor = "rgb(197, 97, 134)"
     }
 }
 
