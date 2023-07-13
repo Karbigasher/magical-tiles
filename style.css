@@ -1,0 +1,24 @@
+/* img{
+  width: 85vmin;
+  height: 50vmin;
+} */
+body{
+  background-color: rgba(29, 31, 30, 0.87);
+}
+
+#image-track > .image{
+  width: 55vmin;
+  height: 65vmin;
+  object-fit: cover;
+  object-position: 50% center;
+  backface-visibility: hidden;
+  transform: translateZ(0) scale(1, 1);
+}
+
+#image-track{
+  display: flex;
+  gap: 2.5vmin;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 25%);
+}
